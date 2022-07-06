@@ -1,0 +1,320 @@
+
+*** Running vivado
+    with args -log PUF.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source PUF.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source PUF.tcl -notrace
+Command: synth_design -top PUF -part xc7a35ticpg236-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Device 21-403] Loading part xc7a35ticpg236-1L
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1344
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1015.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'PUF' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/PUF.vhd:45]
+INFO: [Synth 8-3491] module 'clk_div' declared at 'C:/Users/alici/Desktop/Lab1_Provided_Code/sseg_des.vhd:138' bound to instance 'CLK_D' of component 'CLK_DIV' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/PUF.vhd:194]
+INFO: [Synth 8-638] synthesizing module 'clk_div' [C:/Users/alici/Desktop/Lab1_Provided_Code/sseg_des.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'clk_div' (1#1) [C:/Users/alici/Desktop/Lab1_Provided_Code/sseg_des.vhd:143]
+INFO: [Synth 8-3491] module 'ROPUF' declared at 'C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/ROPUF.vhd:34' bound to instance 'RO_A' of component 'ROPUF' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/PUF.vhd:197]
+INFO: [Synth 8-638] synthesizing module 'ROPUF' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/ROPUF.vhd:40]
+INFO: [Synth 8-3491] module 'RO_SLICE' declared at 'C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/RO_SLICE.vhd:34' bound to instance 'SLICE_1' of component 'RO_SLICE' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/ROPUF.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'RO_SLICE' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/RO_SLICE.vhd:43]
+INFO: [Synth 8-3491] module 'RO_LUT' declared at 'C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/RO_LUT.vhd:34' bound to instance 'LUT_G' of component 'RO_LUT' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/RO_SLICE.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'RO_LUT' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/RO_LUT.vhd:41]
+INFO: [Synth 8-3491] module 'mux_two_in' declared at 'C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/mux_two_in.vhd:34' bound to instance 'mux_lut' of component 'mux_two_in' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/RO_LUT.vhd:66]
+INFO: [Synth 8-638] synthesizing module 'mux_two_in' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/mux_two_in.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'mux_two_in' (2#1) [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/mux_two_in.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'RO_LUT' (3#1) [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/RO_LUT.vhd:41]
+INFO: [Synth 8-3491] module 'RO_LUT' declared at 'C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/RO_LUT.vhd:34' bound to instance 'LUT_F' of component 'RO_LUT' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/RO_SLICE.vhd:84]
+INFO: [Synth 8-3491] module 'mux_two_in' declared at 'C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/mux_two_in.vhd:34' bound to instance 'MUX' of component 'mux_two_in' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/RO_SLICE.vhd:89]
+INFO: [Synth 8-3491] module 'latch' declared at 'C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/latch.vhd:34' bound to instance 'end_latch' of component 'latch' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/RO_SLICE.vhd:96]
+INFO: [Synth 8-638] synthesizing module 'latch' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/latch.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'latch' (4#1) [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/latch.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'RO_SLICE' (5#1) [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/RO_SLICE.vhd:43]
+INFO: [Synth 8-3491] module 'RO_SLICE' declared at 'C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/RO_SLICE.vhd:34' bound to instance 'SLICE_2' of component 'RO_SLICE' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/ROPUF.vhd:100]
+INFO: [Synth 8-3491] module 'RO_SLICE' declared at 'C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/RO_SLICE.vhd:34' bound to instance 'SLICE_3' of component 'RO_SLICE' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/ROPUF.vhd:107]
+INFO: [Synth 8-256] done synthesizing module 'ROPUF' (6#1) [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/ROPUF.vhd:40]
+INFO: [Synth 8-3491] module 'ROPUF' declared at 'C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/ROPUF.vhd:34' bound to instance 'RO_B' of component 'ROPUF' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/PUF.vhd:201]
+INFO: [Synth 8-3491] module 'ROPUF' declared at 'C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/ROPUF.vhd:34' bound to instance 'RO_C' of component 'ROPUF' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/PUF.vhd:205]
+INFO: [Synth 8-3491] module 'ROPUF' declared at 'C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/ROPUF.vhd:34' bound to instance 'RO_D' of component 'ROPUF' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/PUF.vhd:209]
+INFO: [Synth 8-3491] module 'MUX_4_IN' declared at 'C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/MUX_4_IN.vhd:34' bound to instance 'MUX' of component 'MUX_4_IN' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/PUF.vhd:213]
+INFO: [Synth 8-638] synthesizing module 'MUX_4_IN' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/MUX_4_IN.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'MUX_4_IN' (7#1) [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/MUX_4_IN.vhd:43]
+INFO: [Synth 8-3491] module 'flip_flop' declared at 'C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/flip-flop.vhd:34' bound to instance 'PREV_CH' of component 'flip_flop' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/PUF.vhd:222]
+INFO: [Synth 8-638] synthesizing module 'flip_flop' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/flip-flop.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'flip_flop' (8#1) [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/flip-flop.vhd:41]
+INFO: [Synth 8-3491] module 'COUNTER' declared at 'C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/COUNTER.vhd:35' bound to instance 'STD_CNTR' of component 'COUNTER' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/PUF.vhd:252]
+INFO: [Synth 8-638] synthesizing module 'COUNTER' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/COUNTER.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'COUNTER' (9#1) [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/COUNTER.vhd:42]
+INFO: [Synth 8-3491] module 'COUNTER' declared at 'C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/COUNTER.vhd:35' bound to instance 'RO_CNTR' of component 'COUNTER' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/PUF.vhd:257]
+INFO: [Synth 8-3491] module 'CMP' declared at 'C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/CMP.vhd:34' bound to instance 'IS_MAX' of component 'CMP' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/PUF.vhd:264]
+INFO: [Synth 8-638] synthesizing module 'CMP' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/CMP.vhd:39]
+INFO: [Synth 8-256] done synthesizing module 'CMP' (10#1) [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/CMP.vhd:39]
+INFO: [Synth 8-3491] module 'flip_flop' declared at 'C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/flip-flop.vhd:34' bound to instance 'PUF_CNT' of component 'flip_flop' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/PUF.vhd:280]
+INFO: [Synth 8-3491] module 'sha128_simple' declared at 'C:/Users/alici/Desktop/Lab1_Provided_Code/sha128_simple.vhd:29' bound to instance 'SHA' of component 'sha128_simple' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/PUF.vhd:287]
+INFO: [Synth 8-638] synthesizing module 'sha128_simple' [C:/Users/alici/Desktop/Lab1_Provided_Code/sha128_simple.vhd:38]
+INFO: [Synth 8-3491] module 'sha256' declared at 'C:/Users/alici/Desktop/Lab1_Provided_Code/sha256.vhd:15' bound to instance 'sha256_comp' of component 'sha256' [C:/Users/alici/Desktop/Lab1_Provided_Code/sha128_simple.vhd:66]
+INFO: [Synth 8-638] synthesizing module 'sha256' [C:/Users/alici/Desktop/Lab1_Provided_Code/sha256.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'sha256' (11#1) [C:/Users/alici/Desktop/Lab1_Provided_Code/sha256.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'sha128_simple' (12#1) [C:/Users/alici/Desktop/Lab1_Provided_Code/sha128_simple.vhd:38]
+INFO: [Synth 8-3491] module 'sseg_des' declared at 'C:/Users/alici/Desktop/Lab1_Provided_Code/sseg_des.vhd:42' bound to instance 'sseg' of component 'sseg_des' [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/PUF.vhd:320]
+INFO: [Synth 8-638] synthesizing module 'sseg_des' [C:/Users/alici/Desktop/Lab1_Provided_Code/sseg_des.vhd:54]
+INFO: [Synth 8-3491] module 'clk_div' declared at 'C:/Users/alici/Desktop/Lab1_Provided_Code/sseg_des.vhd:138' bound to instance 'my_clk' of component 'clk_div' [C:/Users/alici/Desktop/Lab1_Provided_Code/sseg_des.vhd:67]
+INFO: [Synth 8-226] default block is never used [C:/Users/alici/Desktop/Lab1_Provided_Code/sseg_des.vhd:83]
+WARNING: [Synth 8-614] signal 'VALID' is read in the process but is not in the sensitivity list [C:/Users/alici/Desktop/Lab1_Provided_Code/sseg_des.vhd:80]
+INFO: [Synth 8-226] default block is never used [C:/Users/alici/Desktop/Lab1_Provided_Code/sseg_des.vhd:117]
+INFO: [Synth 8-256] done synthesizing module 'sseg_des' (13#1) [C:/Users/alici/Desktop/Lab1_Provided_Code/sseg_des.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'PUF' (14#1) [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/PUF.vhd:45]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1015.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1015.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1015.711 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.052 . Memory (MB): peak = 1015.711 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/PUF_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/PUF_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1079.340 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1079.340 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1079.340 ; gain = 63.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35ticpg236-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1079.340 ; gain = 63.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 1079.340 ; gain = 63.629
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'sha256'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                             0001 |                               00
+                 prepare |                             0010 |                               01
+                    busy |                             0100 |                               10
+                   final |                             1000 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'sha256'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1079.340 ; gain = 63.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 11    
+	   4 Input   32 Bit       Adders := 1     
+	   5 Input   32 Bit       Adders := 1     
+	   3 Input   32 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   3 Input     32 Bit         XORs := 5     
+	   2 Input     32 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 82    
+	               16 Bit    Registers := 2     
+	                6 Bit    Registers := 1     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 3     
+	   4 Input   32 Bit        Muxes := 16    
+	   3 Input   32 Bit        Muxes := 1     
+	  16 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
+	   4 Input    6 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 102   
+	   4 Input    1 Bit        Muxes := 69    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1079.340 ; gain = 63.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping	Report
++------------+--------------+---------------+----------------+
+|Module Name | RTL Object   | Depth x Width | Implemented As | 
++------------+--------------+---------------+----------------+
+|sha256      | constants[0] | 64x32         | LUT            | 
+|sha256      | constants[0] | 64x32         | LUT            | 
++------------+--------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:36 . Memory (MB): peak = 1079.340 ; gain = 63.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:37 . Memory (MB): peak = 1079.340 ; gain = 63.629
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:38 ; elapsed = 00:00:39 . Memory (MB): peak = 1091.242 ; gain = 75.531
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/sources_1/new/COUNTER.vhd:52]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Users/alici/Desktop/Lab1_Provided_Code/sha256.vhd:70]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1106.039 ; gain = 90.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:43 ; elapsed = 00:00:44 . Memory (MB): peak = 1106.039 ; gain = 90.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1106.039 ; gain = 90.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:43 ; elapsed = 00:00:45 . Memory (MB): peak = 1106.039 ; gain = 90.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1106.039 ; gain = 90.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1106.039 ; gain = 90.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |   136|
+|3     |LUT1   |    97|
+|4     |LUT2   |   442|
+|5     |LUT3   |   333|
+|6     |LUT4   |   327|
+|7     |LUT5   |   201|
+|8     |LUT6   |  1963|
+|9     |MUXF7  |   832|
+|10    |MUXF8  |   256|
+|11    |FDRE   |  2504|
+|12    |FDSE   |   256|
+|13    |IBUF   |    14|
+|14    |OBUF   |    13|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1106.039 ; gain = 90.328
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:34 ; elapsed = 00:00:42 . Memory (MB): peak = 1106.039 ; gain = 26.699
+Synthesis Optimization Complete : Time (s): cpu = 00:00:44 ; elapsed = 00:00:45 . Memory (MB): peak = 1106.039 ; gain = 90.328
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.079 . Memory (MB): peak = 1106.039 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 1224 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+WARNING: [Netlist 29-101] Netlist 'PUF' is not ideal for floorplanning, since the cellview 'sha256' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1106.039 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+70 Infos, 4 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 1106.039 ; gain = 90.328
+INFO: [Common 17-1381] The checkpoint 'C:/Users/alici/Desktop/CPE426/PUF/PUF.runs/synth_1/PUF.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file PUF_utilization_synth.rpt -pb PUF_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 16 23:01:25 2021...

@@ -1,0 +1,17 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Feb 16 11:31:32 2021
+# Process ID: 1840
+# Current directory: C:/Users/alici/Desktop/CPE426/PUF
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7856 C:\Users\alici\Desktop\CPE426\PUF\PUF.xpr
+# Log file: C:/Users/alici/Desktop/CPE426/PUF/vivado.log
+# Journal file: C:/Users/alici/Desktop/CPE426/PUF\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/alici/Desktop/CPE426/PUF/PUF.xpr
+update_compile_order -fileset sources_1
+close_project
+open_project C:/Users/alici/Desktop/CPE426/TRNG/TRNG.xpr
+update_compile_order -fileset sources_1

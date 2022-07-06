@@ -1,0 +1,208 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Sat Jan 16 23:36:02 2021
+| Host         : Die-Razer-Der-Engle running 64-bit major release  (build 9200)
+| Command      : report_drc -file PUF_drc_routed.rpt -pb PUF_drc_routed.pb -rpx PUF_drc_routed.rpx
+| Design       : PUF
+| Device       : xc7a35ticpg236-1L
+| Speed File   : -1L
+| Design State : Fully Routed
+---------------------------------------------------------------------------------------------------
+
+Report DRC
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+           Ruledeck: default
+             Max violations: <unlimited>
+             Violations found: 21
++-----------+----------+-----------------------------------------------------+------------+
+| Rule      | Severity | Description                                         | Violations |
++-----------+----------+-----------------------------------------------------+------------+
+| CFGBVS-1  | Warning  | Missing CFGBVS and CONFIG_VOLTAGE Design Properties | 1          |
+| LUTLP-2   | Warning  | Combinatorial Loop Allowed                          | 4          |
+| RTSTAT-10 | Warning  | No routable loads                                   | 1          |
+| UTLZ-3    | Warning  | Resource utilization                                | 15         |
++-----------+----------+-----------------------------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+CFGBVS-1#1 Warning
+Missing CFGBVS and CONFIG_VOLTAGE Design Properties  
+Neither the CFGBVS nor CONFIG_VOLTAGE voltage property is set in the current_design.  Configuration bank voltage select (CFGBVS) must be set to VCCO or GND, and CONFIG_VOLTAGE must be set to the correct configuration voltage, in order to determine the I/O voltage support for the pins in bank 0.  It is suggested to specify these either using the 'Edit Device Properties' function in the GUI or directly in the XDC file using the following syntax:
+
+ set_property CFGBVS value1 [current_design]
+ #where value1 is either VCCO or GND
+
+ set_property CONFIG_VOLTAGE value2 [current_design]
+ #where value2 is the voltage provided to configuration bank 0
+
+Refer to the device configuration user guide for more information.
+Related violations: <none>
+
+LUTLP-2#1 Warning
+Combinatorial Loop Allowed  
+18 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: RO_A/SLICE_1/LUT_F/A_LUT_inferred_i_1,
+RO_A/SLICE_1/LUT_F/B_LUT_inferred_i_1,
+RO_A/SLICE_1/LUT_F/F_OUT_inferred_i_1,
+RO_A/SLICE_1/LUT_G/G_OUT_inferred_i_1, RO_A/SLICE_1/MUX_OUT_inferred_i_1,
+RO_A/SLICE_2/LUT_F/A_LUT_inferred_i_1__0,
+RO_A/SLICE_2/LUT_F/B_LUT_inferred_i_1__0,
+RO_A/SLICE_2/LUT_F/F_OUT_inferred_i_1__0,
+RO_A/SLICE_2/LUT_G/G_OUT_inferred_i_1__0,
+RO_A/SLICE_2/MUX_OUT_inferred_i_1__0,
+RO_A/SLICE_3/LUT_F/A_LUT_inferred_i_1__1,
+RO_A/SLICE_3/LUT_F/B_LUT_inferred_i_1__1,
+RO_A/SLICE_3/LUT_F/F_OUT_inferred_i_1__1,
+RO_A/SLICE_3/LUT_G/G_OUT_inferred_i_1__1,
+RO_A/SLICE_3/MUX_OUT_inferred_i_1__1 (the first 15 of 18 listed).
+Related violations: <none>
+
+LUTLP-2#2 Warning
+Combinatorial Loop Allowed  
+18 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: RO_B/SLICE_1/LUT_F/A_LUT_inferred_i_1__2,
+RO_B/SLICE_1/LUT_F/B_LUT_inferred_i_1__2,
+RO_B/SLICE_1/LUT_F/F_OUT_inferred_i_1__2,
+RO_B/SLICE_1/LUT_G/G_OUT_inferred_i_1__2,
+RO_B/SLICE_1/MUX_OUT_inferred_i_1__2,
+RO_B/SLICE_2/LUT_F/A_LUT_inferred_i_1__3,
+RO_B/SLICE_2/LUT_F/B_LUT_inferred_i_1__3,
+RO_B/SLICE_2/LUT_F/F_OUT_inferred_i_1__3,
+RO_B/SLICE_2/LUT_G/G_OUT_inferred_i_1__3,
+RO_B/SLICE_2/MUX_OUT_inferred_i_1__3,
+RO_B/SLICE_3/LUT_F/A_LUT_inferred_i_1__4,
+RO_B/SLICE_3/LUT_F/B_LUT_inferred_i_1__4,
+RO_B/SLICE_3/LUT_F/F_OUT_inferred_i_1__4,
+RO_B/SLICE_3/LUT_G/G_OUT_inferred_i_1__4,
+RO_B/SLICE_3/MUX_OUT_inferred_i_1__4 (the first 15 of 18 listed).
+Related violations: <none>
+
+LUTLP-2#3 Warning
+Combinatorial Loop Allowed  
+18 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: RO_C/SLICE_1/LUT_F/A_LUT_inferred_i_1__5,
+RO_C/SLICE_1/LUT_F/B_LUT_inferred_i_1__5,
+RO_C/SLICE_1/LUT_F/F_OUT_inferred_i_1__5,
+RO_C/SLICE_1/LUT_G/G_OUT_inferred_i_1__5,
+RO_C/SLICE_1/MUX_OUT_inferred_i_1__5,
+RO_C/SLICE_2/LUT_F/A_LUT_inferred_i_1__6,
+RO_C/SLICE_2/LUT_F/B_LUT_inferred_i_1__6,
+RO_C/SLICE_2/LUT_F/F_OUT_inferred_i_1__6,
+RO_C/SLICE_2/LUT_G/G_OUT_inferred_i_1__6,
+RO_C/SLICE_2/MUX_OUT_inferred_i_1__6,
+RO_C/SLICE_3/LUT_F/A_LUT_inferred_i_1__7,
+RO_C/SLICE_3/LUT_F/B_LUT_inferred_i_1__7,
+RO_C/SLICE_3/LUT_F/F_OUT_inferred_i_1__7,
+RO_C/SLICE_3/LUT_G/G_OUT_inferred_i_1__7,
+RO_C/SLICE_3/MUX_OUT_inferred_i_1__7 (the first 15 of 18 listed).
+Related violations: <none>
+
+LUTLP-2#4 Warning
+Combinatorial Loop Allowed  
+18 LUT cells form a combinatorial loop. This can create a race condition. Timing analysis may not be accurate. The preferred resolution is to modify the design to remove combinatorial logic loops. This loop has been identified in the constraints as being known and understood by use of the ALLOW_COMBINATORIAL_LOOPS property on a net in the loop. The cells in the loop are: RO_D/SLICE_1/LUT_F/A_LUT_inferred_i_1__8,
+RO_D/SLICE_1/LUT_F/B_LUT_inferred_i_1__8,
+RO_D/SLICE_1/LUT_F/F_OUT_inferred_i_1__8,
+RO_D/SLICE_1/LUT_G/G_OUT_inferred_i_1__8,
+RO_D/SLICE_1/MUX_OUT_inferred_i_1__8,
+RO_D/SLICE_2/LUT_F/A_LUT_inferred_i_1__9,
+RO_D/SLICE_2/LUT_F/B_LUT_inferred_i_1__9,
+RO_D/SLICE_2/LUT_F/F_OUT_inferred_i_1__9,
+RO_D/SLICE_2/LUT_G/G_OUT_inferred_i_1__9,
+RO_D/SLICE_2/MUX_OUT_inferred_i_1__9,
+RO_D/SLICE_3/LUT_F/A_LUT_inferred_i_1__10,
+RO_D/SLICE_3/LUT_F/B_LUT_inferred_i_1__10,
+RO_D/SLICE_3/LUT_F/F_OUT_inferred_i_1__10,
+RO_D/SLICE_3/LUT_G/G_OUT_inferred_i_1__10,
+RO_D/SLICE_3/MUX_OUT_inferred_i_1__10 (the first 15 of 18 listed).
+Related violations: <none>
+
+RTSTAT-10#1 Warning
+No routable loads  
+8 net(s) have no routable loads. The problem bus(es) and/or net(s) are CH_REG_IN[10], CH_REG_IN[11], CH_REG_IN[12], CH_REG_IN[13], CH_REG_IN[14],
+CH_REG_IN[15], CH_REG_IN[8], CH_REG_IN[9].
+Related violations: <none>
+
+UTLZ-3#1 Warning
+Resource utilization  - PBlock:pblock_RO_A_1
+LUT as Logic over-utilized in Pblock pblock_RO_A_1 (Pblock pblock_RO_A_1 has 18 LUT as Logic(s) assigned to it, but only 8 LUT as Logic(s) are available in the area range defined. The placer will attempt to combine LUT as Logic(s) to make the assigned LUT as Logic(s) fit in the Pblock range. This may cause increased runtime and negative performance. It is highly encouraged that either the Pblock slice range is increased or fewer LUT as Logic(s) are assigned to the Pblock.)
+Related violations: <none>
+
+UTLZ-3#2 Warning
+Resource utilization  - PBlock:pblock_RO_B_1
+LUT as Logic over-utilized in Pblock pblock_RO_B_1 (Pblock pblock_RO_B_1 has 17 LUT as Logic(s) assigned to it, but only 8 LUT as Logic(s) are available in the area range defined. The placer will attempt to combine LUT as Logic(s) to make the assigned LUT as Logic(s) fit in the Pblock range. This may cause increased runtime and negative performance. It is highly encouraged that either the Pblock slice range is increased or fewer LUT as Logic(s) are assigned to the Pblock.)
+Related violations: <none>
+
+UTLZ-3#3 Warning
+Resource utilization  - PBlock:pblock_RO_C_1
+LUT as Logic over-utilized in Pblock pblock_RO_C_1 (Pblock pblock_RO_C_1 has 16 LUT as Logic(s) assigned to it, but only 8 LUT as Logic(s) are available in the area range defined. The placer will attempt to combine LUT as Logic(s) to make the assigned LUT as Logic(s) fit in the Pblock range. This may cause increased runtime and negative performance. It is highly encouraged that either the Pblock slice range is increased or fewer LUT as Logic(s) are assigned to the Pblock.)
+Related violations: <none>
+
+UTLZ-3#4 Warning
+Resource utilization  - PBlock:pblock_RO_A_1
+LUT1 and LUT3 over-utilized in Pblock pblock_RO_A_1 (This design requires more LUT1 and LUT3 cells than are available in Pblock 'pblock_RO_A_1'. This design requires 18 of such cell types but only 16 compatible sites are available in Pblock 'pblock_RO_A_1'. Please consider increasing the span of Pblock 'pblock_RO_A_1' or removing cells from it.)
+Related violations: <none>
+
+UTLZ-3#5 Warning
+Resource utilization  - PBlock:pblock_RO_B_1
+LUT1 and LUT3 over-utilized in Pblock pblock_RO_B_1 (This design requires more LUT1 and LUT3 cells than are available in Pblock 'pblock_RO_B_1'. This design requires 18 of such cell types but only 16 compatible sites are available in Pblock 'pblock_RO_B_1'. Please consider increasing the span of Pblock 'pblock_RO_B_1' or removing cells from it.)
+Related violations: <none>
+
+UTLZ-3#6 Warning
+Resource utilization  - PBlock:pblock_RO_C_1
+LUT1 and LUT3 over-utilized in Pblock pblock_RO_C_1 (This design requires more LUT1 and LUT3 cells than are available in Pblock 'pblock_RO_C_1'. This design requires 18 of such cell types but only 16 compatible sites are available in Pblock 'pblock_RO_C_1'. Please consider increasing the span of Pblock 'pblock_RO_C_1' or removing cells from it.)
+Related violations: <none>
+
+UTLZ-3#7 Warning
+Resource utilization  - PBlock:pblock_RO_A_1
+Slice LUTs over-utilized in Pblock pblock_RO_A_1 (Pblock pblock_RO_A_1 has 18 Slice LUTs(s) assigned to it, but only 8 Slice LUTs(s) are available in the area range defined. The placer will attempt to combine Slice LUTs(s) to make the assigned Slice LUTs(s) fit in the Pblock range. This may cause increased runtime and negative performance. It is highly encouraged that either the Pblock slice range is increased or fewer Slice LUTs(s) are assigned to the Pblock.)
+Related violations: <none>
+
+UTLZ-3#8 Warning
+Resource utilization  - PBlock:pblock_RO_B_1
+Slice LUTs over-utilized in Pblock pblock_RO_B_1 (Pblock pblock_RO_B_1 has 17 Slice LUTs(s) assigned to it, but only 8 Slice LUTs(s) are available in the area range defined. The placer will attempt to combine Slice LUTs(s) to make the assigned Slice LUTs(s) fit in the Pblock range. This may cause increased runtime and negative performance. It is highly encouraged that either the Pblock slice range is increased or fewer Slice LUTs(s) are assigned to the Pblock.)
+Related violations: <none>
+
+UTLZ-3#9 Warning
+Resource utilization  - PBlock:pblock_RO_C_1
+Slice LUTs over-utilized in Pblock pblock_RO_C_1 (Pblock pblock_RO_C_1 has 16 Slice LUTs(s) assigned to it, but only 8 Slice LUTs(s) are available in the area range defined. The placer will attempt to combine Slice LUTs(s) to make the assigned Slice LUTs(s) fit in the Pblock range. This may cause increased runtime and negative performance. It is highly encouraged that either the Pblock slice range is increased or fewer Slice LUTs(s) are assigned to the Pblock.)
+Related violations: <none>
+
+UTLZ-3#10 Warning
+Resource utilization  - PBlock:pblock_RO_A_1
+Slice over-utilized in Pblock pblock_RO_A_1 (This design requires more Slice cells than are available in Pblock 'pblock_RO_A_1'. This design requires 5 of such cell types but only 2 compatible sites are available in Pblock 'pblock_RO_A_1'. Please consider increasing the span of Pblock 'pblock_RO_A_1' or removing cells from it.)
+Related violations: <none>
+
+UTLZ-3#11 Warning
+Resource utilization  - PBlock:pblock_RO_B_1
+Slice over-utilized in Pblock pblock_RO_B_1 (This design requires more Slice cells than are available in Pblock 'pblock_RO_B_1'. This design requires 6 of such cell types but only 2 compatible sites are available in Pblock 'pblock_RO_B_1'. Please consider increasing the span of Pblock 'pblock_RO_B_1' or removing cells from it.)
+Related violations: <none>
+
+UTLZ-3#12 Warning
+Resource utilization  - PBlock:pblock_RO_C_1
+Slice over-utilized in Pblock pblock_RO_C_1 (This design requires more Slice cells than are available in Pblock 'pblock_RO_C_1'. This design requires 4 of such cell types but only 2 compatible sites are available in Pblock 'pblock_RO_C_1'. Please consider increasing the span of Pblock 'pblock_RO_C_1' or removing cells from it.)
+Related violations: <none>
+
+UTLZ-3#13 Warning
+Resource utilization  - PBlock:pblock_RO_A_1
+pblock_RO_A_1 over-utilized in Pblock pblock_RO_A_1 (Pblock pblock_RO_A_1 IS_SOFT property set. Ignoring capacity requirements for cells assigned to Pblock.)
+Related violations: <none>
+
+UTLZ-3#14 Warning
+Resource utilization  - PBlock:pblock_RO_B_1
+pblock_RO_B_1 over-utilized in Pblock pblock_RO_B_1 (Pblock pblock_RO_B_1 IS_SOFT property set. Ignoring capacity requirements for cells assigned to Pblock.)
+Related violations: <none>
+
+UTLZ-3#15 Warning
+Resource utilization  - PBlock:pblock_RO_C_1
+pblock_RO_C_1 over-utilized in Pblock pblock_RO_C_1 (Pblock pblock_RO_C_1 IS_SOFT property set. Ignoring capacity requirements for cells assigned to Pblock.)
+Related violations: <none>
+
+

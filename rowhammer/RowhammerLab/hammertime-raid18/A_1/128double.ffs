@@ -1,0 +1,13 @@
+GPGFlip
+16256 total attacks (over 130048 KiB), of which 172 successful (  1.1 %)
+172 exploitable pages found
+Minimum (contiguous) memory required: 760 KiB
+Mean number of attacks until successful: 94.5
+Mean time to successful attack: 18.9 seconds (assuming 200ms/attack)
+
+APT sources.list domain flip
+16256 total attacks (over 130048 KiB), of which 1956 successful ( 12.0 %)
+2135 exploitable pages found
+Minimum (contiguous) memory required: 72 KiB
+Mean number of attacks until successful: 8.3
+Mean time to successful attack: 1.7 seconds (assuming 200ms/attack)

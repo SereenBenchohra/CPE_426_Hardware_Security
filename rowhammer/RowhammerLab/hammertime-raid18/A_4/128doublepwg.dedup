@@ -1,0 +1,5 @@
+16256 total attacks (over 130048 KiB), of which 16004 successful ( 98.4 %)
+47538 exploitable pages found
+Minimum (contiguous) memory required: 16 KiB
+Mean number of attacks until successful: 1.0
+Mean time to successful attack: 0.2 seconds (assuming 200ms/attack)

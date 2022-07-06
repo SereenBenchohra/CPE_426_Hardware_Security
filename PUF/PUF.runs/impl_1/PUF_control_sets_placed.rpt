@@ -1,0 +1,155 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Sat Jan 16 23:35:30 2021
+| Host         : Die-Razer-Der-Engle running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file PUF_control_sets_placed.rpt
+| Design       : PUF
+| Device       : xc7a35ti
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    77 |
+|    Minimum number of control sets                        |    77 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    32 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    77 |
+| >= 0 to < 4        |     2 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     0 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |    72 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               8 |            5 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              62 |           16 |
+| Yes          | No                    | No                     |            2362 |         1273 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |             320 |          111 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++------------------+----------------------------------------------+-------------------------------+------------------+----------------+--------------+
+|   Clock Signal   |                 Enable Signal                |        Set/Reset Signal       | Slice Load Count | Bel Load Count | Bels / Slice |
++------------------+----------------------------------------------+-------------------------------+------------------+----------------+--------------+
+|  sseg/my_clk/CLK |                                              |                               |                1 |              2 |         2.00 |
+|  CLK_D/in0_BUFG  |                                              |                               |                2 |              2 |         1.00 |
+|  CLK_IBUF_BUFG   |                                              |                               |                2 |              4 |         2.00 |
+|  CLK_D/in0_BUFG  | CH_EN                                        |                               |                5 |              8 |         1.60 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/state                        |                               |                2 |              9 |         4.50 |
+|  CLK_D/in0_BUFG  | CNT_EN                                       |                               |                6 |             16 |         2.67 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/current_iteration[5]_i_1_n_0 |                               |                7 |             25 |         3.57 |
+|  CLK_IBUF_BUFG   |                                              | sseg/my_clk/tmp_clk           |                8 |             31 |         3.88 |
+|  CLK_IBUF_BUFG   |                                              | CLK_D/tmp_clk                 |                8 |             31 |         3.88 |
+|  MUX/in0_BUFG    | CNT_EN                                       | CNT_RST                       |                8 |             32 |         4.00 |
+|  CLK_D/in0_BUFG  | CNT_EN                                       | CNT_RST                       |                8 |             32 |         4.00 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[63]_95                     |                               |               22 |             32 |         1.45 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[38]_70                     |                               |               23 |             32 |         1.39 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[3]__0                      |                               |               17 |             32 |         1.88 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[42]_74                     |                               |               22 |             32 |         1.45 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[44]_76                     |                               |               22 |             32 |         1.45 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[40]_72                     |                               |               23 |             32 |         1.39 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[45]_77                     |                               |               26 |             32 |         1.23 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[18]__0                     |                               |               17 |             32 |         1.88 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[19]__0                     |                               |               15 |             32 |         2.13 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[21]__0                     |                               |               19 |             32 |         1.68 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[23]__0                     |                               |               25 |             32 |         1.28 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[24]__0                     |                               |               24 |             32 |         1.33 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[34]_66                     |                               |               12 |             32 |         2.67 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[46]_78                     |                               |               15 |             32 |         2.13 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[41]_73                     |                               |               17 |             32 |         1.88 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[25]__0                     |                               |               21 |             32 |         1.52 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[35]_67                     |                               |               14 |             32 |         2.29 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[10]__0                     |                               |               17 |             32 |         1.88 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[29]__0                     |                               |               27 |             32 |         1.19 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[30]__0                     |                               |               22 |             32 |         1.45 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[33]_65                     |                               |               13 |             32 |         2.46 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[43]_75                     |                               |               24 |             32 |         1.33 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[14]__0                     |                               |               16 |             32 |         2.00 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[17]__0                     |                               |               13 |             32 |         2.46 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[37]_69                     |                               |               15 |             32 |         2.13 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[39]_71                     |                               |               16 |             32 |         2.00 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[0]__0                      |                               |               13 |             32 |         2.46 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[31]__0                     |                               |               18 |             32 |         1.78 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[16]__0                     |                               |               16 |             32 |         2.00 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[36]_68                     |                               |               15 |             32 |         2.13 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[13]__0                     |                               |               18 |             32 |         1.78 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[22]__0                     |                               |               23 |             32 |         1.39 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[28]__0                     |                               |               22 |             32 |         1.45 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[12]__0                     |                               |               18 |             32 |         1.78 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[2]__0                      |                               |               20 |             32 |         1.60 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[26]__0                     |                               |               19 |             32 |         1.68 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[11]__0                     |                               |               18 |             32 |         1.78 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[27]__0                     |                               |               23 |             32 |         1.39 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[20]__0                     |                               |               17 |             32 |         1.88 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[15]__0                     |                               |               16 |             32 |         2.00 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[32]_64                     |                               |               18 |             32 |         1.78 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[1]__0                      |                               |               21 |             32 |         1.52 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[4]__0                      |                               |               16 |             32 |         2.00 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[53]_85                     |                               |               14 |             32 |         2.29 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[60]_92                     |                               |               24 |             32 |         1.33 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[61]_93                     |                               |               24 |             32 |         1.33 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[62]_94                     |                               |               19 |             32 |         1.68 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[52]_84                     |                               |               17 |             32 |         1.88 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[55]_87                     |                               |               23 |             32 |         1.39 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[5]__0                      |                               |               19 |             32 |         1.68 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[9]__0                      |                               |               26 |             32 |         1.23 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[50]_82                     |                               |               17 |             32 |         1.88 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[49]_81                     |                               |               14 |             32 |         2.29 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[56]_88                     |                               |               23 |             32 |         1.39 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[57]_89                     |                               |               20 |             32 |         1.60 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[58]_90                     |                               |               19 |             32 |         1.68 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[59]_91                     |                               |               15 |             32 |         2.13 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[54]_86                     |                               |               15 |             32 |         2.13 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[47]_79                     |                               |               18 |             32 |         1.78 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[51]_83                     |                               |               13 |             32 |         2.46 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[6]__0                      |                               |               21 |             32 |         1.52 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[8]__0                      |                               |               23 |             32 |         1.39 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[48]_80                     |                               |               19 |             32 |         1.68 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/W[7]__0                      |                               |               19 |             32 |         1.68 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/h6[31]_i_1_n_0               |                               |               43 |            256 |         5.95 |
+|  CLK_D/in0_BUFG  | SHA/sha256_comp/a[31]_i_2_n_0                | SHA/sha256_comp/a[31]_i_1_n_0 |               95 |            256 |         2.69 |
++------------------+----------------------------------------------+-------------------------------+------------------+----------------+--------------+
+
+
