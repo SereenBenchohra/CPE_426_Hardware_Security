@@ -1,0 +1,292 @@
+
+*** Running vivado
+    with args -log TRNG.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source TRNG.tcl
+
+
+
+****** Vivado v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source TRNG.tcl -notrace
+Command: synth_design -top TRNG -part xc7a35ticpg236-1L
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35ti'
+INFO: [Device 21-403] Loading part xc7a35ticpg236-1L
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13400
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1017.469 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'TRNG' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/TRNG.vhd:45]
+INFO: [Synth 8-3491] module 'RO' declared at 'C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/RO.vhd:34' bound to instance 'RO0' of component 'RO' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/TRNG.vhd:138]
+INFO: [Synth 8-638] synthesizing module 'RO' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/RO.vhd:38]
+INFO: [Synth 8-3491] module 'latch' declared at 'C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/latch.vhd:34' bound to instance 'latch_a' of component 'latch' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/RO.vhd:66]
+INFO: [Synth 8-638] synthesizing module 'latch' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/latch.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'latch' (1#1) [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/latch.vhd:40]
+INFO: [Synth 8-3491] module 'latch' declared at 'C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/latch.vhd:34' bound to instance 'latch_b' of component 'latch' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/RO.vhd:74]
+INFO: [Synth 8-256] done synthesizing module 'RO' (2#1) [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/RO.vhd:38]
+INFO: [Synth 8-3491] module 'RO' declared at 'C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/RO.vhd:34' bound to instance 'RO1' of component 'RO' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/TRNG.vhd:140]
+INFO: [Synth 8-3491] module 'clk_divx' declared at 'C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/clk_divx.vhd:32' bound to instance 'clk_div' of component 'clk_divx' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/TRNG.vhd:142]
+INFO: [Synth 8-638] synthesizing module 'clk_divx' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/clk_divx.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'clk_divx' (3#1) [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/clk_divx.vhd:37]
+INFO: [Synth 8-3491] module 'sampler' declared at 'C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/sampler.vhd:34' bound to instance 'bit_gen' of component 'sampler' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/TRNG.vhd:145]
+INFO: [Synth 8-638] synthesizing module 'sampler' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/sampler.vhd:45]
+INFO: [Synth 8-3491] module 'D_flip_flop' declared at 'C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/D_flip_flop.vhd:34' bound to instance 'ff_1' of component 'D_flip_flop' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/sampler.vhd:76]
+INFO: [Synth 8-638] synthesizing module 'D_flip_flop' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/D_flip_flop.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'D_flip_flop' (4#1) [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/D_flip_flop.vhd:42]
+INFO: [Synth 8-3491] module 'D_flip_flop' declared at 'C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/D_flip_flop.vhd:34' bound to instance 'C_1' of component 'D_flip_flop' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/sampler.vhd:85]
+INFO: [Synth 8-3491] module 'D_flip_flop' declared at 'C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/D_flip_flop.vhd:34' bound to instance 'bitReadyFF' of component 'D_flip_flop' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/sampler.vhd:93]
+INFO: [Synth 8-3491] module 'D_flip_flop' declared at 'C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/D_flip_flop.vhd:34' bound to instance 'RandOutFF' of component 'D_flip_flop' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/sampler.vhd:99]
+INFO: [Synth 8-256] done synthesizing module 'sampler' (5#1) [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/sampler.vhd:45]
+INFO: [Synth 8-3491] module 'controller' declared at 'C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/controller.vhd:34' bound to instance 'bit_gen_control' of component 'controller' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/TRNG.vhd:154]
+INFO: [Synth 8-638] synthesizing module 'controller' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/controller.vhd:41]
+INFO: [Synth 8-256] done synthesizing module 'controller' (6#1) [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/controller.vhd:41]
+INFO: [Synth 8-3491] module 'strm_2_num' declared at 'C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/strm_2_num.vhd:35' bound to instance 'rnum' of component 'strm_2_num' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/TRNG.vhd:159]
+INFO: [Synth 8-638] synthesizing module 'strm_2_num' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/strm_2_num.vhd:49]
+INFO: [Synth 8-3491] module 'counter' declared at 'C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/counter.vhd:35' bound to instance 'count_2_16' of component 'counter' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/strm_2_num.vhd:139]
+INFO: [Synth 8-638] synthesizing module 'counter' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/counter.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'counter' (7#1) [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/counter.vhd:42]
+INFO: [Synth 8-3491] module 'counter' declared at 'C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/counter.vhd:35' bound to instance 'count_2_2' of component 'counter' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/strm_2_num.vhd:144]
+WARNING: [Synth 8-614] signal 'bit_0' is read in the process but is not in the sensitivity list [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/strm_2_num.vhd:264]
+WARNING: [Synth 8-614] signal 'bit_1' is read in the process but is not in the sensitivity list [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/strm_2_num.vhd:264]
+WARNING: [Synth 8-614] signal 'bit_2' is read in the process but is not in the sensitivity list [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/strm_2_num.vhd:264]
+WARNING: [Synth 8-614] signal 'bit_3' is read in the process but is not in the sensitivity list [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/strm_2_num.vhd:264]
+WARNING: [Synth 8-614] signal 'bit_4' is read in the process but is not in the sensitivity list [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/strm_2_num.vhd:264]
+WARNING: [Synth 8-614] signal 'bit_5' is read in the process but is not in the sensitivity list [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/strm_2_num.vhd:264]
+WARNING: [Synth 8-614] signal 'bit_6' is read in the process but is not in the sensitivity list [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/strm_2_num.vhd:264]
+WARNING: [Synth 8-614] signal 'bit_7' is read in the process but is not in the sensitivity list [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/strm_2_num.vhd:264]
+WARNING: [Synth 8-614] signal 'bit_8' is read in the process but is not in the sensitivity list [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/strm_2_num.vhd:264]
+WARNING: [Synth 8-614] signal 'bit_9' is read in the process but is not in the sensitivity list [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/strm_2_num.vhd:264]
+WARNING: [Synth 8-614] signal 'bit_10' is read in the process but is not in the sensitivity list [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/strm_2_num.vhd:264]
+WARNING: [Synth 8-614] signal 'bit_11' is read in the process but is not in the sensitivity list [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/strm_2_num.vhd:264]
+WARNING: [Synth 8-614] signal 'bit_12' is read in the process but is not in the sensitivity list [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/strm_2_num.vhd:264]
+WARNING: [Synth 8-614] signal 'bit_13' is read in the process but is not in the sensitivity list [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/strm_2_num.vhd:264]
+WARNING: [Synth 8-614] signal 'bit_14' is read in the process but is not in the sensitivity list [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/strm_2_num.vhd:264]
+WARNING: [Synth 8-614] signal 'bit_15' is read in the process but is not in the sensitivity list [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/strm_2_num.vhd:264]
+INFO: [Synth 8-256] done synthesizing module 'strm_2_num' (8#1) [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/strm_2_num.vhd:49]
+INFO: [Synth 8-3491] module 'sseg_des' declared at 'C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/sseg_des.vhd:42' bound to instance 'display' of component 'sseg_des' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/TRNG.vhd:181]
+INFO: [Synth 8-638] synthesizing module 'sseg_des' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/sseg_des.vhd:54]
+INFO: [Synth 8-3491] module 'clk_div' declared at 'C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/sseg_des.vhd:138' bound to instance 'my_clk' of component 'clk_div' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/sseg_des.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'clk_div' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/sseg_des.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'clk_div' (9#1) [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/sseg_des.vhd:143]
+INFO: [Synth 8-226] default block is never used [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/sseg_des.vhd:83]
+WARNING: [Synth 8-614] signal 'VALID' is read in the process but is not in the sensitivity list [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/sseg_des.vhd:80]
+INFO: [Synth 8-226] default block is never used [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/sseg_des.vhd:117]
+INFO: [Synth 8-256] done synthesizing module 'sseg_des' (10#1) [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/sseg_des.vhd:54]
+INFO: [Synth 8-256] done synthesizing module 'TRNG' (11#1) [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/TRNG.vhd:45]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 1017.469 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1017.469 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1017.469 ; gain = 0.000
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1017.469 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/constrs_1/new/constraints.xdc]
+Finished Parsing XDC File [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/constrs_1/new/constraints.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/alici/Desktop/CPE426/PUF/PUF.srcs/constrs_1/new/constraints.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/TRNG_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/TRNG_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1044.172 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.020 . Memory (MB): peak = 1044.172 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1044.172 ; gain = 26.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a35ticpg236-1L
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1044.172 ; gain = 26.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1044.172 ; gain = 26.703
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'Q_reg' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/latch.vhd:46]
+WARNING: [Synth 8-327] inferring latch for variable 'num_out_reg' [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/strm_2_num.vhd:267]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1044.172 ; gain = 26.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   32 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 2     
+	   2 Input    2 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 1     
++---Registers : 
+	               32 Bit    Registers := 2     
+	                5 Bit    Registers := 2     
+	                2 Bit    Registers := 1     
+	                1 Bit    Registers := 32    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 2     
+	  16 Input    7 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 1     
+	   5 Input    4 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 162   
+	  16 Input    1 Bit        Muxes := 35    
+	   4 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 90 (col length:60)
+BRAMs: 100 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1044.172 ; gain = 26.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1044.172 ; gain = 26.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1044.172 ; gain = 26.703
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 1056.375 ; gain = 38.906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/strm_2_num.vhd:158]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/D_flip_flop.vhd:50]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/controller.vhd:49]
+WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [C:/Users/alici/Desktop/CPE426/TRNG/TRNG.srcs/sources_1/new/D_flip_flop.vhd:50]
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1056.375 ; gain = 38.906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1056.375 ; gain = 38.906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1056.375 ; gain = 38.906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1056.375 ; gain = 38.906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1056.375 ; gain = 38.906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1056.375 ; gain = 38.906
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |    16|
+|3     |LUT1   |    48|
+|4     |LUT2   |    11|
+|5     |LUT3   |     3|
+|6     |LUT4   |    26|
+|7     |LUT5   |    11|
+|8     |LUT6   |    28|
+|9     |FDRE   |   106|
+|10    |LD     |    16|
+|11    |IBUF   |     2|
+|12    |OBUF   |    19|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1056.375 ; gain = 38.906
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 6 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 1056.375 ; gain = 12.203
+Synthesis Optimization Complete : Time (s): cpu = 00:00:35 ; elapsed = 00:00:38 . Memory (MB): peak = 1056.375 ; gain = 38.906
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1063.074 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 32 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1067.105 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 16 instances were transformed.
+  LD => LDCE: 16 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+55 Infos, 23 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:43 ; elapsed = 00:01:05 . Memory (MB): peak = 1067.105 ; gain = 49.637
+INFO: [Common 17-1381] The checkpoint 'C:/Users/alici/Desktop/CPE426/TRNG/TRNG.runs/synth_1/TRNG.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file TRNG_utilization_synth.rpt -pb TRNG_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Feb  6 14:09:51 2021...
